@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="calculate()">
+    <!-- Viết hàm tính diện tích, hàm tính chu vi hình tròn. -->
+    <script>
+        function calculate() {
+            let radius = parseInt(prompt('Enter the radius'));
+            let circum = radius*2*3.14;
+            let surface = radius**2*3.14;
+            console.log("The circumference of the circle is " +circum);
+            console.log("The surface of the circle is "+ surface)
+        }
+
+    </script>
+</body>
+</html>

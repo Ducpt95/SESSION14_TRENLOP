@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Enter a star" id="myInput">
+    <button onclick="checkStar()">Check</button>
+    <script>
+        let myArr1 = [
+            'Polaris',
+            'Aldebaran',
+            'Deneb',
+            'Vega',
+            'Altair',
+            'Dubhe',
+            'Regulus'
+    ]
+        let myArr2 = [
+            'Ursa Minor',
+            'Tarurus',
+            'Cygnus',
+            'Lyra',
+            'Aquila',
+            'Ursa Major',
+            'Leo'
+        ]
+        function checkStar() {
+            let check = document.getElementById('myInput').value
+            for (let i = 0; i<=myArr1.length;i++) {
+                if (check==myArr1[i]) {
+                    console.log("the star you are looking for is "+myArr2[i])
+                } else {
+                    console.log("It doesn't exist")
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

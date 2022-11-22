@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không -->
+    <input id="myId">
+    <button onclick="checkNum()">Click</button>
+    <script>
+        let num = document.getElementById('myId').value
+        function checkNum() {
+            if (typeof num == "number") {
+                document.write('True')
+            } else {
+                document.write('False')
+            }
+        }
+    </script>
+</body>
+</html>

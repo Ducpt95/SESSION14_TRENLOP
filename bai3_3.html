@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="inputTwoNums()">
+    <!-- Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham
+số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ
+nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+ -->
+    <script>
+        function inputTwoNums() {
+            let num1 = parseInt(prompt('Enter the first number'));
+            let num2 = parseInt(prompt('Enter the second number'));
+            if (num1>num2) {
+                document.write('the first number is bigger than the second number');
+            } else if(num1<=num2) {
+                let sum = num1 + num2;
+                document.write(sum);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <!--  Ứng dụng quản lý sản phẩm sử dụng hàm -->
+    <label style="font-weight:600">Add New Products</label>
+    <div>
+        <input id="addProduct" type="text" placeholder="New Product">
+        <button id="btnAdd" onclick="addProduct()">Add</button>
+    </div>
+    <label style="font-weight:600">Edit Products</label>
+    <div>
+        <input id="edit">
+        <button onclick="save()">Save</button>
+    </div>
+    <div id="displayProduct"></div>
+    
+    <script>
+        var arrayProduct = ['Samsung','Nokia','Iphone','Blackberry','Sony'];
+        function displayProduct() {
+
+            var tableProduct = '<table border="1" cellspacing ="1">'
+                + '<tr>'
+                + '<th>STT</th>'
+                + '<th>Products</th>'
+                + '<th colspan="2">Action</th>'
+                +'</tr>'
+                for (let i=0;i<arrayProduct.length;i++) {
+                    tableProduct += '<tr>'
+                        +'<td>' +(i+1) +'</td>'
+                        +'<td>' + arrayProduct[i] +'</td>'
+                        + '<td> <button onclick="editProduct('+i+')">Edit</button></td>'
+                        + '<td> <button onclick="deleteProduct('+i+')">Delete</button></td>'
+                        +'</tr>'
+                }
+                tableProduct += '</table>'
+            document.getElementById('displayProduct').innerHTML = tableProduct;
+             
+        }
+        displayProduct();
+
+    function addProduct() {
+        let addNewProduct = document.getElementById('addProduct').value;
+        arrayProduct.push(addNewProduct);
+        displayProduct();
+    }
+     
+    function deleteProduct(i) {
+        arrayProduct.splice(i,1);
+        displayProduct();
+    }
+    var value = '';
+    function editProduct(i) {
+        document.getElementById('edit').value = arrayProduct[i]
+        value = i;
+    }
+
+    function save() {
+        let newEdit = document.getElementById('edit').value;
+        arrayProduct[value] = newEdit;
+        displayProduct();
+
+    }
+
+   
+       
+    </script>
+    
+</body>
+</html>
